@@ -30,7 +30,7 @@ public class Driver {
         int answer7=factorial1.factorial(5);
         System.out.println(answer7);
         MyMath factorial2 = new MyMath();
-        int answer8=factorial2.factorial(33);
+        int answer8=factorial2.factorial(13);
         System.out.println(answer8);
         MyMath factorial3 = new MyMath();
         int answer9=factorial3.factorial(6);
