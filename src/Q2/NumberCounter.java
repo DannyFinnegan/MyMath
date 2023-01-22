@@ -1,26 +1,26 @@
 package Q2;
 
 
-import javax.swing.*;
-import java.util.ArrayList;
+import java.util.Scanner;
 
 public class NumberCounter {
 
     public static void main(String[] args) {
-        ArrayList<Integer> Numbers = new ArrayList<>();
-        String numberAsString;
-        int number;
-        numberAsString=JOptionPane.showInputDialog(null,"Please enter a number: ","Number",JOptionPane.INFORMATION_MESSAGE);
-        number=Integer.parseInt(numberAsString);
-        Numbers.add(number);
+        Scanner scanner = new Scanner(System.in);
+        int[] counts = new int[100];
 
-        while (number >=1)
-        {
-            numberAsString=JOptionPane.showInputDialog(null,"Please enter a number: ","Number",JOptionPane.INFORMATION_MESSAGE);
-            number= Integer.parseInt(numberAsString);
-            Numbers.add(number);
+        System.out.println("Enter numbers between 1 and 100: ");
+        int input = scanner.nextInt();
+
+        while (input >= 1 && input <= 100) {
+            counts[input - 1]++;
+            input = scanner.nextInt();
         }
-        Numbers.remove(Numbers.size()-1);
-        System.out.println(Numbers.toString());
+
+        for (int i = 0; i < counts.length; i++) {
+            if (counts[i] > 0) {
+                System.out.println((i + 1) + " was entered " + counts[i] + " time(s).");
+            }
+        }
     }
 }
