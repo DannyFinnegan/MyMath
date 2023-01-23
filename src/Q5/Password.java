@@ -1,13 +1,13 @@
 package Q5;
 
 public class Password {
-    public static String inputNewPassword (String Password)
+    public String PasswordSet(String Password)
     {
         boolean Length = false;
         boolean Uppercase = false;
         boolean Lowercase = false;
         boolean digit = false;
-        boolean valid = true;
+        boolean valid = false;
         String ResultTrue = "This password is Valid";
         String ResultFalse = "This password is not valid, Please try again";
 
