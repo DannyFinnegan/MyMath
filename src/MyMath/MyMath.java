@@ -1,7 +1,5 @@
 package MyMath;
 
-import javax.swing.*;
-
 public class MyMath
 {
     public static int customPower(int number, int power)
