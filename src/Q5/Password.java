@@ -46,4 +46,9 @@ public class Password {
         }
 
     }
+
+    public Boolean PasswordValid(String Password)
+    {
+
+    }
 }
