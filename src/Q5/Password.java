@@ -1,5 +1,7 @@
 package Q5;
 
+import javax.swing.*;
+
 public class Password {
     public String PasswordSet(String Password)
     {
@@ -11,7 +13,7 @@ public class Password {
         String ResultTrue = "This password is Valid";
         String ResultFalse = "This password is not valid, Please try again";
 
-        for (int i =0;i<=Password.length();i++)
+        for (int i =0;i<=Password.length()+1;i++)
         {
             if (Password.length()>=8) {
                 Length = true;
@@ -47,8 +49,21 @@ public class Password {
 
     }
 
-    public Boolean PasswordValid(String Password)
+    public String PasswordValid(String Password)
     {
 
+        String Attempt=JOptionPane.showInputDialog(null,"Please enter password","Password",JOptionPane.INFORMATION_MESSAGE);
+        if(Attempt==Password)
+        {
+
+        }
+
+     if(Attempt==Password)
+        {
+            return ("Welcome");
+        }
+        else {
+            return ("No");
+        }
     }
 }
